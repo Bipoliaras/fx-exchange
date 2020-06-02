@@ -1,5 +1,7 @@
 package com.ernestas.danske.fxexhange;
 
+import com.ernestas.danske.fxexhange.domain.ExchangeRequest;
+import com.ernestas.danske.fxexhange.foreignexchange.FxCurrency;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import java.math.BigDecimal;
@@ -27,13 +29,15 @@ public class ExchangeControllersTests {
   public void whenGetExchangeRates_ok() {
 
     RestAssured.given()
-        .pathParam("currencyFrom", "EUR")
-        .pathParam("currencyTo", "DKK")
-        .pathParam("amount", BigDecimal.ONE)
+        .body(ExchangeRequest.builder()
+            .fxCurrencyFrom(FxCurrency.EUR)
+            .fxCurrencyTo(FxCurrency.DKK)
+            .amount(BigDecimal.ONE)
+            .build())
         .accept(ContentType.JSON)
         .contentType(ContentType.JSON)
         .log().all()
-        .get("/rates/from/{currencyFrom}/to/{currencyTo}/amount/{amount}")
+        .post("/rates/exchange")
         .then()
         .log().all()
         .statusCode(200);
@@ -44,13 +48,34 @@ public class ExchangeControllersTests {
   public void whenGetExchangeRates_throwsBadRequestException() {
 
     RestAssured.given()
-        .pathParam("currencyFrom", "EUR")
-        .pathParam("currencyTo", "LTU")
-        .pathParam("amount", BigDecimal.ONE)
+        .body(ExchangeRequest.builder()
+            .fxCurrencyFrom(FxCurrency.EUR)
+            .fxCurrencyTo(FxCurrency.LTU)
+            .amount(BigDecimal.ONE)
+            .build())
         .accept(ContentType.JSON)
         .contentType(ContentType.JSON)
         .log().all()
-        .get("/rates/from/{currencyFrom}/to/{currencyTo}/amount/{amount}")
+        .post("/rates/exchange")
+        .then()
+        .log().all()
+        .statusCode(400);
+
+  }
+
+  @Test
+  public void whenGetExchangeRatesWithInvalidAmount_throwsBadRequestException() {
+
+    RestAssured.given()
+        .body(ExchangeRequest.builder()
+            .fxCurrencyFrom(FxCurrency.EUR)
+            .fxCurrencyTo(FxCurrency.LTU)
+            .amount(new BigDecimal("0.5"))
+            .build())
+        .accept(ContentType.JSON)
+        .contentType(ContentType.JSON)
+        .log().all()
+        .post("/rates/exchange")
         .then()
         .log().all()
         .statusCode(400);

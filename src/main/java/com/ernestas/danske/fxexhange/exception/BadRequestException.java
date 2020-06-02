@@ -1,4 +1,4 @@
-package com.ernestas.danske.fxexhange.error;
+package com.ernestas.danske.fxexhange.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
