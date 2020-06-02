@@ -1,6 +1,5 @@
 package com.ernestas.danske.fxexhange.domain;
 
-import com.ernestas.danske.fxexhange.foreignexchange.FxCurrency;
 import java.math.BigDecimal;
 import javax.validation.constraints.DecimalMin;
 import lombok.AllArgsConstructor;

@@ -1,14 +1,14 @@
 package com.ernestas.danske.fxexhange.service;
 
 import com.ernestas.danske.fxexhange.domain.ExchangeRequest;
-import com.ernestas.danske.fxexhange.foreignexchange.FxRates;
+import com.ernestas.danske.fxexhange.domain.FxRates;
 import com.ernestas.danske.fxexhange.exception.BadRequestException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ExchangeService {
+public class CurrencyExchanger {
 
   public BigDecimal exchange(ExchangeRequest exchangeRequest) {
 

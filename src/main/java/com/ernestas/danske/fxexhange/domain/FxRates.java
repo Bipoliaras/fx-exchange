@@ -1,4 +1,4 @@
-package com.ernestas.danske.fxexhange.foreignexchange;
+package com.ernestas.danske.fxexhange.domain;
 
 import java.math.BigDecimal;
 import java.util.Map;

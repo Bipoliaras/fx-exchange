@@ -1,4 +1,4 @@
-package com.ernestas.danske.fxexhange.foreignexchange;
+package com.ernestas.danske.fxexhange.domain;
 
 public enum FxCurrency {
   EUR,
