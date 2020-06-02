@@ -1,4 +1,4 @@
-package com.ernestas.danske.fxexhange.exception;
+package com.ernestas.danske.fxexchange.exception;
 
 public class WebException extends RuntimeException {
 

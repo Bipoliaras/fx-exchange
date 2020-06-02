@@ -1,7 +1,7 @@
-package com.ernestas.danske.fxexhange.api;
+package com.ernestas.danske.fxexchange.api;
 
-import com.ernestas.danske.fxexhange.domain.ExchangeRequest;
-import com.ernestas.danske.fxexhange.service.CurrencyExchanger;
+import com.ernestas.danske.fxexchange.domain.ExchangeRequest;
+import com.ernestas.danske.fxexchange.domain.CurrencyExchanger;
 import java.math.BigDecimal;
 import javax.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;

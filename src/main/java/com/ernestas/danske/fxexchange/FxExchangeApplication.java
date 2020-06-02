@@ -1,4 +1,4 @@
-package com.ernestas.danske.fxexhange;
+package com.ernestas.danske.fxexchange;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,12 +1,12 @@
-package com.ernestas.danske.fxexhange;
+package com.ernestas.danske.fxexchange;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-import com.ernestas.danske.fxexhange.domain.ExchangeRequest;
-import com.ernestas.danske.fxexhange.exception.BadRequestException;
-import com.ernestas.danske.fxexhange.domain.FxCurrency;
-import com.ernestas.danske.fxexhange.service.CurrencyExchanger;
+import com.ernestas.danske.fxexchange.domain.ExchangeRequest;
+import com.ernestas.danske.fxexchange.exception.BadRequestException;
+import com.ernestas.danske.fxexchange.domain.FxCurrency;
+import com.ernestas.danske.fxexchange.domain.CurrencyExchanger;
 import java.math.BigDecimal;
 import org.junit.Test;
 import org.junit.runner.RunWith;

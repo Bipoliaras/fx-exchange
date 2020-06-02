@@ -1,7 +1,7 @@
-package com.ernestas.danske.fxexhange;
+package com.ernestas.danske.fxexchange;
 
-import com.ernestas.danske.fxexhange.domain.ExchangeRequest;
-import com.ernestas.danske.fxexhange.domain.FxCurrency;
+import com.ernestas.danske.fxexchange.domain.ExchangeRequest;
+import com.ernestas.danske.fxexchange.domain.FxCurrency;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import java.math.BigDecimal;

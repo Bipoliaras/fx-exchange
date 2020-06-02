@@ -1,8 +1,6 @@
-package com.ernestas.danske.fxexhange.service;
+package com.ernestas.danske.fxexchange.domain;
 
-import com.ernestas.danske.fxexhange.domain.ExchangeRequest;
-import com.ernestas.danske.fxexhange.domain.FxRates;
-import com.ernestas.danske.fxexhange.exception.BadRequestException;
+import com.ernestas.danske.fxexchange.exception.BadRequestException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import org.springframework.stereotype.Service;

@@ -9,9 +9,9 @@
 		<relativePath/>
 	</parent>
 	<groupId>com.ernestas.danske</groupId>
-	<artifactId>fx-exhange</artifactId>
+	<artifactId>fx-exchange</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>fx-exhange</name>
+	<name>fx-exchange</name>
 	<description>Technical task for Danske Bank</description>
 
 	<properties>
