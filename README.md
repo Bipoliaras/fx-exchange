@@ -7,7 +7,7 @@ Technical task for Danske Bank
 
 Method  | Path | Explanation
 ------------- | ------------- | ------------- |
-POST  | /rates/exchange | Create account for customer |
+POST  | /rates/exchange | Convert one currency amount to another |
 
 # Required dependencies to run the project
 
